@@ -1,27 +1,63 @@
-import React from  'react';
+import React, { useState} from  'react';
 import './styles.css';
 import Logo from '../../assets/logo.png';
+import { useHistory } from "react-router-dom";
+import api from '../../services/api';
 
 const Login = () => {
+
+    const [email,setEmail] = useState('');
+    const [password,setPassword] = useState('');
+    const history = useHistory();
+
+    async function HandleLogin(e) {
+        e.preventDefault();
+
+        try {
+            const response = await api.post('users/login', { email, password });
+
+            history.push('/home');
+
+        } catch (err) {
+            alert('Falha no login, tente novamente');
+        }
+    }
+
     return(
         <div className="container">
             <div className="containerLogin">
                 <div className="logo">
                     <img src={Logo} alt="NaveJS" />
                 </div>
-                <div className="inputsLogin">
+
+                
+                <form onSubmit={HandleLogin} >
+                    <div className="inputsLogin">
                     <div className="field">
-                        <label htmlFor="email">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="E-mail" />
+                        <label htmlFor="password">E-mail</label>
+                        <input 
+                        type="email" 
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                        placeholder="E-mail" 
+                        />
                     </div>
                     <div className="field">
                         <label htmlFor="senha">Senha</label>
-                        <input type="password" name="password" id="password" placeholder="Senha" />
+                        <input 
+                        type="password" 
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                        placeholder="Senha"
+                        />
                     </div>
                 </div>
+
                 <div className="buttonContainer">
-                    <button>Login</button>
+                    <button type="submit">Entrar</button>
                 </div>
+            
+                </form>
             </div>
         </div>
     );

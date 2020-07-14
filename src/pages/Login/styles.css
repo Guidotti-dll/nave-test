@@ -21,16 +21,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: aqua; */
 }
 
-.inputsLogin {
+form.inputsLogin {
     height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color: brown; */
 }
 
 .field{
