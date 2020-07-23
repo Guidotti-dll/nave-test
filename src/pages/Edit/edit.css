@@ -1,0 +1,58 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content .containerEdit {
+    width: 592px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content .containerEdit .container-title {
+    width: 592px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+
+.content .containerEdit .container-title a{
+    display: flex;
+    align-items: center;
+}
+
+.content .containerEdit .container-title strong {
+    font-size: 24px;
+}
+
+.content .containerEdit .container-inputs {
+    width: 100%;
+}
+
+.content .containerEdit .container-inputs .field-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .containerEdit .container-inputs .field-group .field input {
+    width: 280px;
+    height: 40px;
+}
+
+.content .containerEdit .container-inputs .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.content .containerEdit .container-inputs .buttonContainer button {
+    background-color: #212121;
+    width: 176px;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: 600;
+}

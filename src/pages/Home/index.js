@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
-import { IoMdTrash } from "react-icons/io";
-import { FaPen } from "react-icons/fa";
+import { IoMdTrash} from 'react-icons/io';
+import { FaPen } from 'react-icons/fa';
 
 import api from '../../services/api';
 
@@ -48,7 +48,7 @@ const Home = () => {
                                     <Link to="" >
                                         <IoMdTrash size={23} />
                                     </Link>
-                                    <Link to="">
+                                    <Link to="/edit">
                                         <FaPen size={16} />
                                     </Link>
                                 </div>
